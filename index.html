@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Aparecida Nutrição</title>
+		<title>IMC</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
@@ -16,7 +16,15 @@
 		</header>
 		<main>
 			<section class="container">
-				<h2>Meus pacientes</h2>
+				<h2>Pacientes</h2>
+				<section class="container">
+			    <h2>Meus pacientes</h2>
+			    <label for="filtrar-tabela">Filtre:</label>
+			    <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+			    <table>
+			        <!-- conteúdo da tabela omitido -->
+			    </table>
+				</section>
 				<table>
 					<thead>
 						<tr>
@@ -68,6 +76,7 @@
 						</tr>
 					</tbody>
 				</table>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Pacientes</button>
 
 				<section class="container" style="width:100%!important">
 					<h2 id="titulo-form">Adicionar novo paciente</h2>
@@ -98,5 +107,8 @@
 		</main>
 		<script src="js/calcula-imc.js"></script>
 		<script src="js/form.js"></script>
+		<script src="js/remover-paciente.js"></script>
+		<script src="js/filtra.js"></script>
+		<script src="js/buscar-pacientes.js"></script>
 	</body>
 </html>

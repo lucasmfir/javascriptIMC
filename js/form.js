@@ -6,20 +6,24 @@ botao.addEventListener("click", function(event){
 
   var form = document.querySelector('#form-adicionar');
   var paciente = obtemPacienteForm(form);
-  var pacienteTr = montaPacienteTr(paciente);
-
   var erros = validaPaciente(paciente);
+
   if (erros.length > 0) {
     mostraErros(erros);
     return;
   }
 
-  tabela.appendChild(pacienteTr);
+  adicionaPacienteTabela(paciente);
   form.reset();
   var ul = document.querySelector('#mensagens-erros');
   ul.innerHTML = '';
 
 })
+
+function adicionaPacienteTabela(paciente){
+  var pacienteTr = montaPacienteTr(paciente);
+  tabela.appendChild(pacienteTr);
+}
 
 
 function obtemPacienteForm(form){
